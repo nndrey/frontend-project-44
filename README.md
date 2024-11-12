@@ -5,3 +5,10 @@
 
 **You can view the review at this link**
 https://asciinema.org/a/31hrZ7eotcfyke9cRNXsSqKrt
+
+---
+
+## Game brain-calc ##
+
+**You can view the review at this link**
+https://asciinema.org/a/YtDcbeA8RVLU1LB2GjlPu08u5
