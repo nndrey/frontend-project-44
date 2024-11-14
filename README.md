@@ -12,3 +12,9 @@ https://asciinema.org/a/31hrZ7eotcfyke9cRNXsSqKrt
 
 **You can view the review at this link**
 https://asciinema.org/a/YtDcbeA8RVLU1LB2GjlPu08u5
+
+
+## Game brain-gcd ##
+
+**You can view the review at this link**
+https://asciinema.org/a/czfUZP5LDDsnytPw7HKtLwwm2

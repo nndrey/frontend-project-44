@@ -1,7 +1,6 @@
 "use strict";
 import readlineSync from "readline-sync";
 import { brainGamesEngine } from "../src/index.js";
-
 const rules = `Answer "yes" if the number is even, otherwise answer "no".`;
 
 const taskEven = (name) => {
