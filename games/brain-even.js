@@ -3,7 +3,7 @@ import readlineSync from "readline-sync";
 import { brainGamesEngine } from "../src/index.js";
 const rules = `Answer "yes" if the number is even, otherwise answer "no".`;
 
-const taskEven = (name) => {
+const doEven = (name) => {
   const randomNumber = Math.ceil(Math.random() * 100); //формируем рандомное число
   console.log(`Question: ${randomNumber}`);
   const answerUser = readlineSync.question("Your answer: "); //спрашиваем игрока
@@ -22,7 +22,7 @@ const taskEven = (name) => {
 
 const startGameEven = () => {
   //закидываем правила и логику игры в движок
-  console.log(brainGamesEngine(rules, taskEven));
+  console.log(brainGamesEngine(rules, doEven));
 };
 
 export { startGameEven };

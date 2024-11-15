@@ -18,3 +18,9 @@ https://asciinema.org/a/YtDcbeA8RVLU1LB2GjlPu08u5
 
 **You can view the review at this link**
 https://asciinema.org/a/czfUZP5LDDsnytPw7HKtLwwm2
+
+
+## Game brain-progression ##
+
+**You can view the review at this link**
+https://asciinema.org/a/rjOyehVnekHNVAO48NjNl3nv6

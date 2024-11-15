@@ -3,7 +3,7 @@ import readlineSync from "readline-sync";
 import { brainGamesEngine } from "../src/index.js";
 const rules = `What is the result of the expression?`;
 
-const taskCalc = (name) => {
+const doCalc = (name) => {
   //формируем рандомное вырожение
   const arryOfOperators = ["*", "+", "-"];
   const randomIndexOperators = Math.floor(Math.random() * 3);
@@ -28,7 +28,7 @@ const taskCalc = (name) => {
 
 const startGameCalc = () => {
   //закидываем правила и логику игры в движок
-  console.log(brainGamesEngine(rules, taskCalc));
+  console.log(brainGamesEngine(rules, doCalc));
 };
 
 export { startGameCalc };

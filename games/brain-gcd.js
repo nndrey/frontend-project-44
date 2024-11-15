@@ -3,7 +3,7 @@ import readlineSync from "readline-sync";
 import { brainGamesEngine } from "../src/index.js";
 const rules = `Find the greatest common divisor of given numbers.`;
 
-const tackGcd = (name) => {
+const doGcd = (name) => {
   const firstNumberRandom = Math.ceil(Math.random() * 100); //создаем два случайных числа
   const secondNumberRandom = Math.ceil(Math.random() * 100);
   let more = //находим большее
@@ -40,7 +40,7 @@ const tackGcd = (name) => {
 
 const startGameGcd = () => {
   //закидываем правила и логику игры в движок
-  console.log(brainGamesEngine(rules, tackGcd));
+  console.log(brainGamesEngine(rules, doGcd));
 };
 
 export { startGameGcd };
