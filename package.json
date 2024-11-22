@@ -1,8 +1,8 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/nndrey/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/nndrey/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "The app contains five mind development games",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,12 +10,12 @@
   "license": "ISC",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js",
-    "brain-gcd": "bin/brain-gcd.js",
-    "brain-progression": "bin/brain-progression.js",
-    "brain-prime": "bin/brain-prime.js"
+    "brain-games": "bin/brainGames.js",
+    "brain-even": "bin/brainEven.js",
+    "brain-calc": "bin/brainCalc.js",
+    "brain-gcd": "bin/brainGcd.js",
+    "brain-progression": "bin/brainProgression.js",
+    "brain-prime": "bin/brainPrime.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"
