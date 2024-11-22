@@ -1,8 +1,8 @@
 import { brainGamesEngine } from "../index.js";
 import { random, doArrayOfProgressions } from "../helpers.js";
-const rules = `What number is missing in the progression?`;
 
 const doProgression = () => {
+  const rules = "What number is missing in the progression?";
   const progressionStep = random(2, 4);
   const sizeProgression = random(7, 12);
   const startNumber = random(1, 50);

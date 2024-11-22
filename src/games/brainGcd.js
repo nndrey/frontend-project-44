@@ -1,11 +1,10 @@
 import { brainGamesEngine } from "../index.js";
 import { random, calculateGcd } from "../helpers.js";
-const rules = `Find the greatest common divisor of given numbers.`;
 
 const doGcd = () => {
+  const rules = "Find the greatest common divisor of given numbers.";
   const firstNumberRandom = random(1, 100);
   const secondNumberRandom = random(1, 100);
-
   let correctAnswer = calculateGcd(
     firstNumberRandom,
     secondNumberRandom

@@ -22,7 +22,7 @@ const doCalc = () => {
       },
     },
   ];
-  const rules = `What is the result of the expression?`;
+  const rules = "What is the result of the expression?";
   const randomIndexOperators = random(0, 2);
   const leftOperand = random(1, 100);
   const rightOperand = random(1, 100);
