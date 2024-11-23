@@ -37,4 +37,6 @@ const calculateGcd = (numFirst, numSecond) => {
   return lessNumb;
 };
 
-export { random, isPrimeNumber, isEvenNumber, doArrayOfProgressions, calculateGcd };
+export {
+  random, isPrimeNumber, isEvenNumber, doArrayOfProgressions, calculateGcd
+};

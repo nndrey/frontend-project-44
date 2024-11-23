@@ -5,21 +5,15 @@ const doCalc = () => {
   const arryOfOperators = [
     {
       symbol: '*',
-      expression: (numFirst, numSecond) => {
-        return numFirst * numSecond;
-      },
+      expression: (numFirst, numSecond) => numFirst * numSecond,
     },
     {
       symbol: '+',
-      expression: (numFirst, numSecond) => {
-        return numFirst + numSecond;
-      },
+      expression: (numFirst, numSecond) => numFirst + numSecond,
     },
     {
       symbol: '-',
-      expression: (numFirst, numSecond) => {
-        return numFirst - numSecond;
-      },
+      expression: (numFirst, numSecond) => numFirst - numSecond,
     },
   ];
   const rules = 'What is the result of the expression?';
