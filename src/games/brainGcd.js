@@ -1,8 +1,8 @@
-import { brainGamesEngine } from "../index.js";
-import { random, calculateGcd } from "../helpers.js";
+import { brainGamesEngine } from '../index.js';
+import { random, calculateGcd } from '../helpers.js';
 
 const doGcd = () => {
-  const rules = "Find the greatest common divisor of given numbers.";
+  const rules = 'Find the greatest common divisor of given numbers.';
   const firstNumberRandom = random(1, 100);
   const secondNumberRandom = random(1, 100);
   let correctAnswer = calculateGcd(
