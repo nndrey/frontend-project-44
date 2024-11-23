@@ -38,5 +38,5 @@ const calculateGcd = (numFirst, numSecond) => {
 };
 
 export {
-  random, isPrimeNumber, isEvenNumber, doArrayOfProgressions, calculateGcd
+  random, isPrimeNumber, isEvenNumber, doArrayOfProgressions, calculateGcd,
 };
