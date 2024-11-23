@@ -1,4 +1,4 @@
-import { brainGamesEngine } from '../index.js';
+import brainGamesEngine from '../index.js';
 import { random, isPrimeNumber } from '../helpers.js';
 
 const doPrime = () => {
@@ -14,4 +14,4 @@ const startGamePrime = () => {
   console.log(brainGamesEngine(doPrime));
 };
 
-export { startGamePrime };
+export default startGamePrime;

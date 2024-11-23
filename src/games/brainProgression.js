@@ -1,4 +1,4 @@
-import { brainGamesEngine } from '../index.js';
+import brainGamesEngine from '../index.js';
 import { random, doArrayOfProgressions } from '../helpers.js';
 
 const doProgression = () => {
@@ -9,7 +9,7 @@ const doProgression = () => {
   const arryNumbers = doArrayOfProgressions(
     sizeProgression,
     progressionStep,
-    startNumber
+    startNumber,
   );
   const randomPlug = random(0, sizeProgression - 1);
   const plug = '..';
@@ -24,4 +24,4 @@ const doProgression = () => {
 const startGameProgression = () => {
   console.log(brainGamesEngine(doProgression));
 };
-export { startGameProgression };
+export default startGameProgression;

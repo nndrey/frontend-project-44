@@ -1,4 +1,4 @@
-import { brainGamesEngine } from '../index.js';
+import brainGamesEngine from '../index.js';
 import { isEvenNumber, random } from '../helpers.js';
 
 const doEven = () => {
@@ -14,4 +14,4 @@ const startGameEven = () => {
   console.log(brainGamesEngine(doEven));
 };
 
-export { startGameEven };
+export default startGameEven;

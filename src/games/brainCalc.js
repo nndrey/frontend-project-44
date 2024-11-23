@@ -1,23 +1,23 @@
-import { brainGamesEngine } from '../index.js';
+import brainGamesEngine from '../index.js';
 import { random } from '../helpers.js';
 
 const doCalc = () => {
   const arryOfOperators = [
     {
       symbol: '*',
-      expression: function (numFirst, numSecond) {
+      expression: (numFirst, numSecond) => {
         return numFirst * numSecond;
       },
     },
     {
       symbol: '+',
-      expression: function (numFirst, numSecond) {
+      expression: (numFirst, numSecond) => {
         return numFirst + numSecond;
       },
     },
     {
       symbol: '-',
-      expression: function (numFirst, numSecond) {
+      expression: (numFirst, numSecond) => {
         return numFirst - numSecond;
       },
     },
@@ -39,4 +39,4 @@ const startGameCalc = () => {
   console.log(brainGamesEngine(doCalc));
 };
 
-export { startGameCalc };
+export default startGameCalc;

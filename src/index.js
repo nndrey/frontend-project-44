@@ -22,4 +22,4 @@ const brainGamesEngine = (game) => {
   }
   return `Congratulations, ${name}!`;
 };
-export { brainGamesEngine };
+export default brainGamesEngine;
