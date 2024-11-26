@@ -2,7 +2,6 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "The app contains five mind development games",
-  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,17 +1,26 @@
-import brainGamesEngine from '../index.js';
-import { random, isPrimeNumber } from '../helpers.js';
+import runEngineGame from '../index.js';
+import createRandomNumber from '../helpers.js';
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+const isPrimeNumber = (num) => {
+  if (num <= 1) {
+    return false;
+  }
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
 
-const doPrime = () => {
-  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-  const randomNumber = random(1, 100);
+const createLogicGamePrime = () => {
+  const randomNumber = createRandomNumber(1, 100);
   const correctAnswer = isPrimeNumber(randomNumber) ? 'yes' : 'no';
-  const question = randomNumber;
-  const objInfoGame = { rules, question, correctAnswer };
-  return objInfoGame;
+  return { question: randomNumber, correctAnswer };
 };
 
 const startGamePrime = () => {
-  console.log(brainGamesEngine(doPrime));
+  runEngineGame(createLogicGamePrime, rules);
 };
 
 export default startGamePrime;

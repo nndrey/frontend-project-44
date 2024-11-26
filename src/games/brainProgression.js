@@ -1,27 +1,34 @@
-import brainGamesEngine from '../index.js';
-import { random, doArrayOfProgressions } from '../helpers.js';
+import runEngineGame from '../index.js';
+import createRandomNumber from '../helpers.js';
+const rules = 'What number is missing in the progression?';
+const generateProgression = (size, step, startNum) => {
+  const result = [startNum];
+  let start = startNum;
+  for (let i = 0; i < size - 1; i += 1) {
+    start += step;
+    result.push(start);
+  }
+  return result;
+};
 
-const doProgression = () => {
-  const rules = 'What number is missing in the progression?';
-  const progressionStep = random(2, 4);
-  const sizeProgression = random(7, 12);
-  const startNumber = random(1, 50);
-  const arryNumbers = doArrayOfProgressions(
+const createLogicGameProgression = () => {
+  const progressionStep = createRandomNumber(2, 4);
+  const sizeProgression = createRandomNumber(7, 12);
+  const startNumber = createRandomNumber(1, 50);
+  const randomProgression = generateProgression(
     sizeProgression,
     progressionStep,
-    startNumber,
+    startNumber
   );
-  const randomPlug = random(0, sizeProgression - 1);
   const plug = '..';
-  const correctAnswer = arryNumbers[randomPlug].toString();
-  arryNumbers[randomPlug] = plug;
-  const result = arryNumbers.toString().replace(/,/g, ' ');
-  const question = result;
-  const objInfoGame = { rules, question, correctAnswer };
-  return objInfoGame;
+  const randomPlug = createRandomNumber(0, randomProgression.length - 1);
+  const correctAnswer = randomProgression[randomPlug].toString();
+  randomProgression[randomPlug] = plug;
+  const result = randomProgression.join(' ');
+  return { question: result, correctAnswer };
 };
 
 const startGameProgression = () => {
-  console.log(brainGamesEngine(doProgression));
+  runEngineGame(createLogicGameProgression, rules);
 };
 export default startGameProgression;

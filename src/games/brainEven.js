@@ -1,17 +1,16 @@
-import brainGamesEngine from '../index.js';
-import { isEvenNumber, random } from '../helpers.js';
+import runEngineGame from '../index.js';
+import createRandomNumber from '../helpers.js';
+const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+const isEvenNumber = (num) => num % 2 === 0;
 
-const doEven = () => {
-  const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const randomNumber = random(1, 100);
+const createLogicGameEven = () => {
+  const randomNumber = createRandomNumber(1, 100);
   const correctAnswer = isEvenNumber(randomNumber) ? 'yes' : 'no';
-  const question = randomNumber;
-  const objInfoGame = { rules, question, correctAnswer };
-  return objInfoGame;
+  return { question: randomNumber, correctAnswer };
 };
 
 const startGameEven = () => {
-  console.log(brainGamesEngine(doEven));
+  runEngineGame(createLogicGameEven, rules);
 };
 
 export default startGameEven;

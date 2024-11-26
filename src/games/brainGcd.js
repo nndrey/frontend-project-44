@@ -1,21 +1,35 @@
-import brainGamesEngine from '../index.js';
-import { random, calculateGcd } from '../helpers.js';
+import runEngineGame from '../index.js';
+import createRandomNumber from '../helpers.js';
+const rules = 'Find the greatest common divisor of given numbers.';
+const calculateGcd = (numFirst, numSecond) => {
+  let moreNumb = numFirst;
+  let lessNumb = numSecond;
+  if (moreNumb < lessNumb) {
+    moreNumb = numSecond;
+    lessNumb = numFirst;
+  }
+  let remainderOfDivision = moreNumb % lessNumb;
+  while (remainderOfDivision !== 0) {
+    moreNumb = lessNumb;
+    lessNumb = remainderOfDivision;
+    remainderOfDivision = moreNumb % lessNumb;
+  }
+  return lessNumb;
+};
 
-const doGcd = () => {
-  const rules = 'Find the greatest common divisor of given numbers.';
-  const firstNumberRandom = random(1, 100);
-  const secondNumberRandom = random(1, 100);
+const createLogicGameGcd = () => {
+  const firstNumberRandom = createRandomNumber(1, 100);
+  const secondNumberRandom = createRandomNumber(1, 100);
   const correctAnswer = calculateGcd(
     firstNumberRandom,
-    secondNumberRandom,
+    secondNumberRandom
   ).toString();
   const question = `${firstNumberRandom} ${secondNumberRandom}`;
-  const objInfoGame = { rules, question, correctAnswer };
-  return objInfoGame;
+  return { question, correctAnswer };
 };
 
 const startGameGcd = () => {
-  console.log(brainGamesEngine(doGcd));
+  runEngineGame(createLogicGameGcd, rules);
 };
 
 export default startGameGcd;

@@ -1,36 +1,36 @@
-import brainGamesEngine from '../index.js';
-import { random } from '../helpers.js';
+import runEngineGame from '../index.js';
+import createRandomNumber from '../helpers.js';
+const rules = 'What is the result of the expression?';
 
-const doCalc = () => {
-  const arryOfOperators = [
-    {
-      symbol: '*',
-      expression: (numFirst, numSecond) => numFirst * numSecond,
-    },
-    {
-      symbol: '+',
-      expression: (numFirst, numSecond) => numFirst + numSecond,
-    },
-    {
-      symbol: '-',
-      expression: (numFirst, numSecond) => numFirst - numSecond,
-    },
-  ];
-  const rules = 'What is the result of the expression?';
-  const randomIndexOperators = random(0, 2);
-  const leftOperand = random(1, 100);
-  const rightOperand = random(1, 100);
-  const expression = `${leftOperand} ${arryOfOperators[randomIndexOperators].symbol} ${rightOperand}`;
-  const correctAnswer = arryOfOperators[randomIndexOperators]
-    .expression(leftOperand, rightOperand)
-    .toString();
-  const question = expression;
-  const objInfoGame = { rules, question, correctAnswer };
-  return objInfoGame;
+const countExpression = (numFirst, numSecond, operator) => {
+  switch (operator) {
+    case '+':
+      return numFirst + numSecond;
+    case '-':
+      return numFirst - numSecond;
+    case '*':
+      return numFirst * numSecond;
+    default:
+      return `unknown operation: ${operator}`;
+  }
+};
+
+const createLogicGameCalk = () => {
+  const arryOfOperators = ['*', '+', '-'];
+  const randomOperator = arryOfOperators[createRandomNumber(0, 2)];
+  const leftOperand = createRandomNumber(1, 100);
+  const rightOperand = createRandomNumber(1, 100);
+  const expression = `${leftOperand} ${randomOperator} ${rightOperand}`;
+  const correctAnswer = countExpression(
+    leftOperand,
+    rightOperand,
+    randomOperator
+  ).toString();
+  return { question: expression, correctAnswer };
 };
 
 const startGameCalc = () => {
-  console.log(brainGamesEngine(doCalc));
+  runEngineGame(createLogicGameCalk, rules);
 };
 
 export default startGameCalc;
