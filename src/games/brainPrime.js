@@ -16,7 +16,7 @@ const isPrimeNumber = (num) => {
 const createLogicGamePrime = () => {
   const randomNumber = createRandomNumber(1, 100);
   const correctAnswer = isPrimeNumber(randomNumber) ? 'yes' : 'no';
-  return { question: randomNumber, correctAnswer, };
+  return { question: randomNumber, correctAnswer };
 };
 
 const startGamePrime = () => {

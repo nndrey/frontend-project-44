@@ -6,7 +6,7 @@ const isEvenNumber = (num) => num % 2 === 0;
 const createLogicGameEven = () => {
   const randomNumber = createRandomNumber(1, 100);
   const correctAnswer = isEvenNumber(randomNumber) ? 'yes' : 'no';
-  return { question: randomNumber, correctAnswer, };
+  return { question: randomNumber, correctAnswer };
 };
 
 const startGameEven = () => {

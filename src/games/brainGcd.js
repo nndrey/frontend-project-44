@@ -25,7 +25,7 @@ const createLogicGameGcd = () => {
     secondNumberRandom,
   ).toString();
   const question = `${firstNumberRandom} ${secondNumberRandom}`;
-  return { question, correctAnswer, };
+  return { question, correctAnswer };
 };
 
 const startGameGcd = () => {
