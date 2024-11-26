@@ -25,7 +25,7 @@ const createLogicGameCalk = () => {
     rightOperand,
     randomOperator,
   ).toString();
-  return { question: expression, correctAnswer };
+  return { question: expression, correctAnswer, };
 };
 
 const startGameCalc = () => {

@@ -16,7 +16,7 @@ const runEngineGame = (game, rules) => {
       );
     }
     console.log('Correct!');
-  };
+  }
   return console.log(`Congratulations, ${name}!`);
 };
 export default runEngineGame;
