@@ -12,7 +12,7 @@ const runEngineGame = (generateRound, description) => {
     const answerUser = readlineSync.question('Your answer: ');
     if (resultGame.correctAnswer !== answerUser) {
       console.log(
-        `'${answerUser}' is wrong answer ;(. Correct answer was '${resultGame.correctAnswer}'.`
+        `'${answerUser}' is wrong answer ;(. Correct answer was '${resultGame.correctAnswer}'.`,
       );
       console.log(`Let's try again, ${name}!`);
       return;

@@ -18,7 +18,7 @@ const createLogicGameProgression = () => {
   const randomProgression = progression(
     sizeProgression,
     progressionStep,
-    startNumber
+    startNumber,
   );
   const plug = '..';
   const hiddenIndex = createRandomNumber(0, randomProgression.length - 1);

@@ -22,7 +22,7 @@ const createLogicGameGcd = () => {
   const secondNumberRandom = createRandomNumber(1, 100);
   const correctAnswer = calculateGcd(
     firstNumberRandom,
-    secondNumberRandom
+    secondNumberRandom,
   ).toString();
   const question = `${firstNumberRandom} ${secondNumberRandom}`;
   return { question, correctAnswer };
