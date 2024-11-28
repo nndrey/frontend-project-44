@@ -1,35 +1,31 @@
 import runEngineGame from '../index.js';
 import createRandomNumber from '../helpers.js';
 
-const rules = 'What is the result of the expression?';
-const countExpression = (numFirst, numSecond, operator) => {
+const description = 'What is the result of the expression?';
+const calculate = (number1, number2, operator) => {
   switch (operator) {
     case '+':
-      return numFirst + numSecond;
+      return number1 + number2;
     case '-':
-      return numFirst - numSecond;
+      return number1 - number2;
     case '*':
-      return numFirst * numSecond;
+      return number1 * number2;
     default:
       return `unknown operation: ${operator}`;
   }
 };
 const createLogicGameCalk = () => {
-  const arryOfOperators = ['*', '+', '-'];
-  const randomOperator = arryOfOperators[createRandomNumber(0, 2)];
-  const leftOperand = createRandomNumber(1, 100);
-  const rightOperand = createRandomNumber(1, 100);
-  const expression = `${leftOperand} ${randomOperator} ${rightOperand}`;
-  const correctAnswer = countExpression(
-    leftOperand,
-    rightOperand,
-    randomOperator,
-  ).toString();
+  const operators = ['*', '+', '-'];
+  const randomOperator = operators[createRandomNumber(0, 2)];
+  const number1 = createRandomNumber(1, 100);
+  const number2 = createRandomNumber(1, 100);
+  const expression = `${number1} ${randomOperator} ${number2}`;
+  const correctAnswer = calculate(number1, number2, randomOperator).toString();
   return { question: expression, correctAnswer };
 };
 
 const startGameCalc = () => {
-  runEngineGame(createLogicGameCalk, rules);
+  runEngineGame(createLogicGameCalk, description);
 };
 
 export default startGameCalc;

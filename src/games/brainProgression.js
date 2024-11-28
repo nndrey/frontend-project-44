@@ -1,8 +1,8 @@
 import runEngineGame from '../index.js';
 import createRandomNumber from '../helpers.js';
 
-const rules = 'What number is missing in the progression?';
-const generateProgression = (size, step, startNum) => {
+const description = 'What number is missing in the progression?';
+const progression = (size, step, startNum) => {
   const result = [startNum];
   let start = startNum;
   for (let i = 0; i < size - 1; i += 1) {
@@ -15,20 +15,20 @@ const createLogicGameProgression = () => {
   const progressionStep = createRandomNumber(2, 4);
   const sizeProgression = createRandomNumber(7, 12);
   const startNumber = createRandomNumber(1, 50);
-  const randomProgression = generateProgression(
+  const randomProgression = progression(
     sizeProgression,
     progressionStep,
-    startNumber,
+    startNumber
   );
   const plug = '..';
-  const randomPlug = createRandomNumber(0, randomProgression.length - 1);
-  const correctAnswer = randomProgression[randomPlug].toString();
-  randomProgression[randomPlug] = plug;
+  const hiddenIndex = createRandomNumber(0, randomProgression.length - 1);
+  const correctAnswer = randomProgression[hiddenIndex].toString();
+  randomProgression[hiddenIndex] = plug;
   const result = randomProgression.join(' ');
   return { question: result, correctAnswer };
 };
 
 const startGameProgression = () => {
-  runEngineGame(createLogicGameProgression, rules);
+  runEngineGame(createLogicGameProgression, description);
 };
 export default startGameProgression;

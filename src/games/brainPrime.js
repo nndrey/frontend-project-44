@@ -1,7 +1,8 @@
 import runEngineGame from '../index.js';
 import createRandomNumber from '../helpers.js';
 
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+const description =
+  'Answer "yes" if given number is prime. Otherwise answer "no"';
 const isPrimeNumber = (num) => {
   if (num <= 1) {
     return false;
@@ -20,7 +21,7 @@ const createLogicGamePrime = () => {
 };
 
 const startGamePrime = () => {
-  runEngineGame(createLogicGamePrime, rules);
+  runEngineGame(createLogicGamePrime, description);
 };
 
 export default startGamePrime;

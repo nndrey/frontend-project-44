@@ -1,7 +1,7 @@
 import runEngineGame from '../index.js';
 import createRandomNumber from '../helpers.js';
 
-const rules = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 const calculateGcd = (numFirst, numSecond) => {
   let moreNumb = numFirst;
   let lessNumb = numSecond;
@@ -22,14 +22,14 @@ const createLogicGameGcd = () => {
   const secondNumberRandom = createRandomNumber(1, 100);
   const correctAnswer = calculateGcd(
     firstNumberRandom,
-    secondNumberRandom,
+    secondNumberRandom
   ).toString();
   const question = `${firstNumberRandom} ${secondNumberRandom}`;
   return { question, correctAnswer };
 };
 
 const startGameGcd = () => {
-  runEngineGame(createLogicGameGcd, rules);
+  runEngineGame(createLogicGameGcd, description);
 };
 
 export default startGameGcd;
