@@ -14,7 +14,7 @@ const runEngineGame = (generateRound, description) => {
       console.log(
         `'${answerUser}' is wrong answer ;(. Correct answer was '${resultGame.correctAnswer}'.`
       );
-      console.log(`Lets try again, ${name}!`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
     console.log('Correct!');
